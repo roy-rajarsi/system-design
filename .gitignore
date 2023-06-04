@@ -1,1 +1,5 @@
 PAT.txt
+*.iml
+*.xml
+*.pyc
+DS_Store
