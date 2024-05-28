@@ -1,0 +1,1742 @@
+2024-05-21 11:31:40,148 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 11:31:49,234 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /
+2024-05-21 11:31:49,307 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 11:33:28,327 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/geo/admin.py changed, reloading.
+2024-05-21 11:33:28,636 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 11:33:41,923 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /admin/listing/listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'airbnb.listing_listing' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1985, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 145, in __init__
+    self.get_results(request)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'airbnb.listing_listing' doesn't exist")
+2024-05-21 11:50:16,759 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 11:50:39,677 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Unauthorized: /listing/
+2024-05-21 11:50:46,870 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Unauthorized: /listing/
+2024-05-21 11:50:50,919 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 34 -> Request -> request.data : {}
+2024-05-21 11:51:38,246 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /admin/listing/listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'airbnb.listing_listing' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1985, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 145, in __init__
+    self.get_results(request)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'airbnb.listing_listing' doesn't exist")
+2024-05-21 11:53:02,845 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/admin.py changed, reloading.
+2024-05-21 11:53:03,161 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 11:57:46,602 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 11:57:48,365 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 11:58:02,251 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 11:58:18,338 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 11:58:48,349 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 11:58:57,595 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 11:59:45,292 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/urls.py changed, reloading.
+2024-05-21 11:59:45,571 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:01:38,405 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:02:15,849 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:03:12,942 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:03:17,225 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:03:17,289 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:03:23,259 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:03:23,277 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/1/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ListingSerializer is not JSON serializable
+2024-05-21 12:03:55,313 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:03:55,644 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:03:56,709 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:06:01,607 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:06:01,624 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/5/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 34, in get
+    listing: Optional[Listing] = Listing.objects.get(id=listing_id)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+listing.models.Listing.DoesNotExist: Listing matching query does not exist.
+2024-05-21 12:08:34,407 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:08:34,420 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/2/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 34, in get
+    listing: Optional[Listing] = Listing.objects.get(id=listing_id)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+listing.models.Listing.DoesNotExist: Listing matching query does not exist.
+2024-05-21 12:09:19,307 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:09:19,633 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:09:20,606 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:09:20,619 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /listing/2/
+2024-05-21 12:10:37,857 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:10:38,165 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:10:40,229 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:10:40,243 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /listing/2/
+2024-05-21 12:14:19,949 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:14:20,614 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:14:37,727 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:14:37,747 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 46, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request.data)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 46, in process_request
+    request: Request = self.generate_request_for_head_handler(request_payload=request) if current_handler is self.get_head_handler() \
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 54, in generate_request_for_head_handler
+    return SearchListingRequest(request_payload=request_payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/search_listing_request.py", line 12, in __init__
+    super().__init__(request_payload=request_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/request.py", line 12, in __init__
+    self.__validate_request()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/request.py", line 29, in __validate_request
+    raise AttributeMissingInRequestPayloadException(request_payload=self.__request_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_request_payload_exception.AttributeMissingInRequestPayloadException: Attribute city Missing in Request Payload -> {}
+2024-05-21 12:15:05,481 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:15:05,492 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 46, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request.data)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 46, in process_request
+    request: Request = self.generate_request_for_head_handler(request_payload=request) if current_handler is self.get_head_handler() \
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 54, in generate_request_for_head_handler
+    return SearchListingRequest(request_payload=request_payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/search_listing_request.py", line 12, in __init__
+    super().__init__(request_payload=request_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/request.py", line 12, in __init__
+    self.__validate_request()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/request.py", line 29, in __validate_request
+    raise AttributeMissingInRequestPayloadException(request_payload=self.__request_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_request_payload_exception.AttributeMissingInRequestPayloadException: Attribute city Missing in Request Payload -> {}
+2024-05-21 12:33:01,005 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:33:01,387 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:33:13,862 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:33:14,139 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:33:17,377 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:33:17,430 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:33:33,230 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /listing&city=1
+2024-05-21 12:33:33,257 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:33:41,482 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /listing/&city=1
+2024-05-21 12:33:56,759 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:33:56,798 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:34:10,219 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:34:19,854 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:34:19,891 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:34:40,843 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:35:06,663 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:35:06,711 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:35:06,755 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:35:07,018 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:35:10,275 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:35:10,326 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:35:35,999 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:35:36,292 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:35:36,879 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:37:02,974 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:37:03,287 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:37:05,055 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:37:05,109 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:37:18,903 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:37:19,184 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:37:20,099 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:37:20,115 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 51, in get
+    print(type(request.query_params.as_dict()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'as_dict'
+2024-05-21 12:37:36,756 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:37:37,077 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:37:38,018 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:37:38,062 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:37:45,409 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:37:45,716 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:37:46,632 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:38:11,494 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:38:11,818 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:38:13,358 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:38:13,414 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:38:28,923 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:40:33,731 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:40:33,774 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:41:29,720 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 28 -> Request -> request.data : {}
+2024-05-21 12:41:29,766 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 12:47:16,732 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:47:17,135 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:50:23,980 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:50:24,278 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:53:37,885 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:53:38,307 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:54:20,691 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 12:54:20,970 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:59:45,654 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 12:59:48,415 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 12:59:48,432 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 58, in get
+    request: Dict[str, Any] = generate_request_payload_from_query_params(query_params=request.query_params)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 55, in generate_request_payload_from_query_params
+    'price_end_range': float(query_params.get('price_end_range'))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2024-05-21 13:00:36,338 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:00:36,637 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:00:37,916 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:00:37,932 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 60, in get
+    request: Dict[str, Any] = generate_request_payload_from_query_params(query_params=request.query_params)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 55, in generate_request_payload_from_query_params
+    'price_end_range': float(query_params.get('price_end_range'))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2024-05-21 13:01:56,168 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:01:56,497 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:01:59,743 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:01:59,759 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 61, in get
+    request: Dict[str, Any] = generate_request_payload_from_query_params(query_params=request.query_params)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 55, in generate_request_payload_from_query_params
+    'price_end_range': float(query_params.get('price_end_range'))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2024-05-21 13:02:35,385 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:03:25,343 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:03:25,681 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:03:27,847 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:03:27,871 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 48, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/coordinate_enrichment_handler.py", line 19, in handle
+    region: Region = Region.objects.get(id=request.get_request_attribute('region'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+geo.models.Region.DoesNotExist: Region matching query does not exist.
+2024-05-21 13:03:37,716 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:03:37,727 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 48, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 13, in handle
+    listings: List[Dict[str, Any]] = search_engine.search(request=request.get_request_payload())
+                                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'search'
+2024-05-21 13:05:35,652 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:05:35,939 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:05:38,200 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:05:38,218 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 50, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 13, in handle
+    listings: List[Dict[str, Any]] = search_engine.search(request=request.get_request_payload())
+                                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'search'
+2024-05-21 13:16:30,661 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:16:31,023 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:16:33,821 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:16:33,842 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 55, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 13, in handle
+    listings: List[Dict[str, Any]] = search_engine.search(request=request.get_request_payload())
+                                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'search'
+2024-05-21 13:17:18,580 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:17:18,883 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:17:19,321 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:17:19,343 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 56, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/region_in_city_validation_handler.py", line 30, in handle
+    return RegionInCityValidatedSearchListingResponse(response_payload={
+                                                                       ^
+TypeError: 'CoordinatesEnrichedSearchListingRequest' object is not a mapping
+2024-05-21 13:20:30,351 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/region_in_city_validation_handler.py changed, reloading.
+2024-05-21 13:20:30,662 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:20:31,941 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:20:31,942 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:20:31,959 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 56, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_engine_enrichment_handler.py", line 16, in handle
+    return SearchEngineEnrichedSearchListingResponse(response_payload={
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_engine_enriched_search_listing_response.py", line 11, in __init__
+    super().__init__(response_payload=response_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 12, in __init__
+    self.__validate_response()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 29, in __validate_response
+    raise AttributeMissingInResponsePayloadException(response_payload=self.__response_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_response_payload_exception.AttributeMissingInResponsePayloadException: Attribute region_in_city_flag Missing in Response Payload -> {'city': City(Id: 1 Name: City1), 'region': Region(Id: 1 Name: Region1 City: City object (1)), 'state': 1, 'tentative_booking_date': datetime.datetime(1999, 8, 28, 0, 0), 'price_start_range': 5000.0, 'price_end_range': 7000.0, 'city_coordinates': (4.0, 4.0), 'region_coordinates': (2.0, 2.0), 'is_region_in_city': True, 'search_engine': <class 'search_engines.none_search_engine.NoneSearchEngine'>}
+2024-05-21 13:24:37,978 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_engine_enriched_search_listing_response.py changed, reloading.
+2024-05-21 13:24:38,296 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:24:40,745 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:24:40,749 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:24:40,766 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 56, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 14, in handle
+    return SearchListingResponse(response_payload={
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_listing_response.py", line 11, in __init__
+    super().__init__(response_payload=response_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 12, in __init__
+    self.__validate_response()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 29, in __validate_response
+    raise AttributeMissingInResponsePayloadException(response_payload=self.__response_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_response_payload_exception.AttributeMissingInResponsePayloadException: Attribute search_object Missing in Response Payload -> {'city': City(Id: 1 Name: City1), 'region': Region(Id: 1 Name: Region1 City: City object (1)), 'state': 1, 'tentative_booking_date': datetime.datetime(1999, 8, 28, 0, 0), 'price_start_range': 5000.0, 'price_end_range': 7000.0, 'city_coordinates': (4.0, 4.0), 'region_coordinates': (2.0, 2.0), 'is_region_in_city': True, 'search_engine': <class 'search_engines.none_search_engine.NoneSearchEngine'>, 'listings': Response({})}
+2024-05-21 13:24:40,789 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:28:09,810 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:28:10,167 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:28:24,666 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/requests/search_engine_enriched_search_listing_request.py changed, reloading.
+2024-05-21 13:28:24,930 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:28:25,183 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:28:25,189 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:28:25,207 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 55, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 14, in handle
+    return SearchListingResponse(response_payload={
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_listing_response.py", line 11, in __init__
+    super().__init__(response_payload=response_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 12, in __init__
+    self.__validate_response()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 29, in __validate_response
+    raise AttributeMissingInResponsePayloadException(response_payload=self.__response_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_response_payload_exception.AttributeMissingInResponsePayloadException: Attribute search_object Missing in Response Payload -> {'city': City(Id: 1 Name: City1), 'region': Region(Id: 1 Name: Region1 City: City object (1)), 'state': 1, 'tentative_booking_date': datetime.datetime(1999, 8, 28, 0, 0), 'price_start_range': 5000.0, 'price_end_range': 7000.0, 'city_coordinates': (4.0, 4.0), 'region_coordinates': (2.0, 2.0), 'is_region_in_city': True, 'search_engine': <class 'search_engines.none_search_engine.NoneSearchEngine'>, 'listings': Response({})}
+2024-05-21 13:31:46,825 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/exceptions/attribute_missing_in_response_payload_exception.py changed, reloading.
+2024-05-21 13:31:47,137 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:31:48,101 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:31:48,103 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:31:48,121 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 55, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 14, in handle
+    return SearchListingResponse(response_payload={
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_listing_response.py", line 11, in __init__
+    super().__init__(response_payload=response_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 12, in __init__
+    self.__validate_response()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 29, in __validate_response
+    raise AttributeMissingInResponsePayloadException(response_payload=self.__response_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_response_payload_exception.AttributeMissingInResponsePayloadException: Attribute "search_object" Missing in Response Payload -> {'city': City(Id: 1 Name: City1), 'region': Region(Id: 1 Name: Region1 City: City object (1)), 'state': 1, 'tentative_booking_date': datetime.datetime(1999, 8, 28, 0, 0), 'price_start_range': 5000.0, 'price_end_range': 7000.0, 'city_coordinates': (4.0, 4.0), 'region_coordinates': (2.0, 2.0), 'is_region_in_city': True, 'search_engine': <class 'search_engines.none_search_engine.NoneSearchEngine'>, 'listings': Response({})}
+2024-05-21 13:31:48,145 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:32:18,995 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:32:19,001 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:32:19,033 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py", line 59, in get
+    response_payload['listings']: Dict[str, Any] = SearchListingFlow(search_engine_type=SearchEngineType.SEARCH_ENGINE_DB_SEARCH_LISTING_ENGINE).process_request(request=request)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py", line 55, in process_request
+    response: Response = current_handler.handle(request=request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py", line 14, in handle
+    return SearchListingResponse(response_payload={
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_listing_response.py", line 11, in __init__
+    super().__init__(response_payload=response_payload, mandatory_attributes=self.__class__.__MANDATORY_ATTRIBUTES)
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 12, in __init__
+    self.__validate_response()
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/response.py", line 29, in __validate_response
+    raise AttributeMissingInResponsePayloadException(response_payload=self.__response_payload, attribute_name=attribute)
+exceptions.attribute_missing_in_response_payload_exception.AttributeMissingInResponsePayloadException: Attribute "search_object" Missing in Response Payload -> {'city': City(Id: 1 Name: City1), 'region': Region(Id: 1 Name: Region1 City: City object (1)), 'state': 1, 'tentative_booking_date': datetime.datetime(1999, 8, 28, 0, 0), 'price_start_range': 5000.0, 'price_end_range': 7000.0, 'city_coordinates': (4.0, 4.0), 'region_coordinates': (2.0, 2.0), 'is_region_in_city': True, 'search_engine': <class 'search_engines.none_search_engine.NoneSearchEngine'>, 'listings': Response({})}
+2024-05-21 13:32:19,147 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/responses/search_listing_response.py changed, reloading.
+2024-05-21 13:32:19,413 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:32:21,578 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:32:21,581 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:32:21,600 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:33:33,749 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:33:34,244 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:33:36,258 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:33:36,261 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:33:36,281 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:34:28,046 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:34:28,365 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:34:29,051 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:34:29,053 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:34:29,073 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:34:29,099 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:34:37,058 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:34:37,060 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:34:37,071 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:37:36,879 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:37:37,253 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:37:38,720 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:37:38,722 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:37:38,742 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:41:50,922 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py changed, reloading.
+2024-05-21 13:41:51,216 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:41:52,479 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:41:52,481 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:41:52,500 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:41:52,539 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:42:11,976 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/handlers/search_listing_handler.py changed, reloading.
+2024-05-21 13:42:12,265 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:42:13,771 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:42:13,773 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:42:13,790 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type NoneResponse is not JSON serializable
+2024-05-21 13:43:16,252 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/none_search_engine.py changed, reloading.
+2024-05-21 13:43:16,573 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:43:17,593 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:43:17,596 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:44:31,731 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:44:32,071 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:44:34,499 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:44:34,501 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/search_engines/search_engine_factory.py : Line 23 -> Parameter :: SearchEngineType -> None is passed to get_search_engine(search_engine_type) Returned NoneSearchEngine by SearchEngineFactory
+2024-05-21 13:47:17,991 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/flows/search_listing_flow.py changed, reloading.
+2024-05-21 13:47:18,408 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:47:19,976 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 30 -> Request -> request.data : {}
+2024-05-21 13:47:20,008 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 440, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Listing is not JSON serializable
+2024-05-21 13:47:20,029 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:50:00,250 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:50:00,571 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:50:02,532 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 29 -> Request -> request.data : {}
+2024-05-21 13:50:02,572 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ListSerializer is not JSON serializable
+2024-05-21 13:50:02,610 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:50:47,098 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:50:47,640 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:50:49,180 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 29 -> Request -> request.data : {}
+2024-05-21 13:50:49,209 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 440, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Listing is not JSON serializable
+2024-05-21 13:51:13,540 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:51:13,835 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:51:15,056 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 29 -> Request -> request.data : {}
+2024-05-21 13:51:15,081 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 440, in _iterencode
+    yield from _iterencode(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Listing is not JSON serializable
+2024-05-21 13:51:59,336 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 266 -> /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py changed, reloading.
+2024-05-21 13:51:59,650 : INFO (20) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/autoreload.py : Line 668 -> Watching for file changes with StatReloader
+2024-05-21 13:51:59,992 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 29 -> Request -> request.data : {}
+2024-05-21 13:52:00,031 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ListSerializer is not JSON serializable
+2024-05-21 13:52:00,060 : WARNING (30) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Not Found: /favicon.ico
+2024-05-21 13:52:05,670 : DEBUG (10) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/src/airbnb/listing/views.py : Line 29 -> Request -> request.data : {}
+2024-05-21 13:52:05,700 : ERROR (40) : /Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/utils/log.py : Line 241 -> Internal Server Error: /listing/
+Traceback (most recent call last):
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 726, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 682, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 412, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/rajarsiroy/Developer/system-design/lld/lld/airbnb/venv/lib/python3.11/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ListSerializer is not JSON serializable

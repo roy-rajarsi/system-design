@@ -1,0 +1,2 @@
+class LocationNotInBoundException(Exception):
+    pass
