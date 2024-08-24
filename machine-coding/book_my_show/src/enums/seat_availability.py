@@ -1,0 +1,8 @@
+from enum import Enum
+
+
+class SeatAvailability(Enum):
+
+    AVAILABLE = 'AVAILABLE'
+    TEMPORARILY_UNAVAILABLE = 'TEMPORARILY_UNAVAILABLE'
+    UNAVAILABLE = 'UNAVAILABLE'
